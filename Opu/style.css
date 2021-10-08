@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.homepage{
+    background-image:url(Opu2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+.homepage::before{
+    content: '';
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    position: absolute;
+}
+
+.headersection {
+    position: relative;
+}
+
+.headersection .nav {
+    background-color: rgba(0, 0, 0, 0.24);
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.headersection .nav .navicon {}
+
+.headersection .nav .navicon img {
+    height: 40px;
+    width: 35px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.headersection .nav .navmenu {
+margin-right: 20px;
+}
+
+.headersection .nav .navmenu ul {
+
+}
+
+.headersection .nav .navmenu ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.headersection .nav .navmenu ul li a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.headersection .nav .navmenu ul li a:hover{
+    color: rgb(0, 255, 115);
+    transition: .5s ease;
+}
+
+#menubutton{
+    z-index: -100000000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.closebutton{
+    position: fixed;
+}
+.openbutton{
+    position: fixed;
+    display: none;
+}
+i{
+    color: white;
+}
+
+.hometext{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 20px;
+    text-align: center;
+}
+.hometext h1{
+    width: auto;
+}
+.changecontent::after{
+    content: '';
+    animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+    0%{
+       content: "Web Developer"; 
+    }
+    40%{
+        content: "Grafix Designer"; 
+    }
+    70%{
+        content: "Programmer"; 
+    }
+    100%{
+        content: "Web Designer"; 
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    #menubutton{
+        z-index: 1;
+    }
+    .headersection{
+        position: fixed;
+        left: -400px;
+        top: 0;
+        background-color: rgba(0, 128, 128, 0.479);
+        backdrop-filter: blur(30px);
+        max-width: 400px;
+        width: 80%;
+        height: 100vh;
+        z-index: 99999;
+    }
+    .headersection .nav{
+        justify-content: unset;
+    }
+
+    .headersection .nav .navmenu ul {
+        padding: 0;
+    }
+
+    .headersection .nav {
+        justify-content: unset;
+        height: 100%;
+    }
+    .navmenu{
+    }
+    
+    .headersection .nav .navmenu ul{
+        padding-top: 120px;
+        
+    }
+    .headersection .nav .navmenu ul li{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+  }
